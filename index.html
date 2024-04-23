@@ -972,6 +972,34 @@
                 </div>
             </div><!-- bringer-footer-line -->
         </footer>
+        <button id="mode-toggle">Toggle Dark/Light Mode</button>
+        <script>
+            const modeToggleBtn = document.getElementById('mode-toggle');
+
+modeToggleBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode'); // Toggle dark mode class on body
+    if (document.body.classList.contains('dark-mode')) {
+        // If dark mode is enabled, update CSS variables for dark mode
+        document.documentElement.style.setProperty('--bringer-s-body-bg', '#07090D');
+        document.documentElement.style.setProperty('--bringer-s-nav', '#07090DCC');
+        document.documentElement.style.setProperty('--bringer-s-container-bg', '#1A1D24');
+        document.documentElement.style.setProperty('--bringer-s-container-frosted', '#1A1D24EE');
+        document.documentElement.style.setProperty('--bringer-s-heading', '#F5F7FA');
+        document.documentElement.style.setProperty('--bringer-s-heading-fade', '#F5F7FAC0');
+        document.documentElement.style.setProperty('--bringer-s-text', '#C5C7CE');
+    } else {
+        // If dark mode is disabled, revert to light mode CSS variables
+        document.documentElement.style.setProperty('--bringer-s-body-bg', '#FFFFFF');
+        document.documentElement.style.setProperty('--bringer-s-nav', '#FFFFFF');
+        document.documentElement.style.setProperty('--bringer-s-container-bg', '#FFFFFF');
+        document.documentElement.style.setProperty('--bringer-s-container-frosted', '#FFFFFFEE');
+        document.documentElement.style.setProperty('--bringer-s-heading', '#000000');
+        document.documentElement.style.setProperty('--bringer-s-heading-fade', 'rgba(0, 0, 0, 0.75)');
+        document.documentElement.style.setProperty('--bringer-s-text', '#000000');
+    }
+});
+
+        </script>
 	</main>
 
     <!-- Right Click Protection Block -->
