@@ -295,20 +295,20 @@
     --bringer-input-br: var(--bringer-xs-br);
 
     /* Input field bottom margin */
-    --bringer-input-gap: 24px;
+    --bringer-input-gap: 30px;
 
     /* Shadow Themes Grid: Container */
     --stg-container-width: 1200px;
 
     /* Shadow Themes Grid: Default Gap */
-    --stg-gap: 32px;
-    --stg-d-gap: 32px;
+    --stg-gap: 38px;
+    --stg-d-gap: 60px;
 
     /* Shadow Themes Grid: Extra Small Gap */
-    --stg-xs-gap: 8px;
+    --stg-xs-gap: 80px;
 
     /* Shadow Themes Grid: Small Gap */
-    --stg-small-gap: 16px;
+    --stg-small-gap: 18px;
 
     /* Shadow Themes Grid: Large Gap */
     --stg-large-gap: 64px;
@@ -351,8 +351,8 @@
         --bringer-small-br: 12px;
         --bringer-xs-br: 6px;
 
-        --stg-gap: 24px;
-        --stg-d-gap: 24px;
+        --stg-gap: 60px;
+        --stg-d-gap: 60px;
         
         --stg-xs-gap: 6px;
         --stg-small-gap: 12px;
@@ -420,7 +420,7 @@
         --bringer-xs-br: 4px;
 
         --stg-gap: 20px;
-        --stg-d-gap: 20px;
+        --stg-d-gap: 60px;
         
         --stg-xs-gap: 6px;
         --stg-small-gap: 12px;

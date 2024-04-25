@@ -2065,7 +2065,7 @@ ul.bringer-socials-list.stg-xl-gap {
 /* === Block Item === */
 .bringer-block {
     border-radius: var(--bringer-small-br);
-    background-color: var(--bringer-s-container-bg);
+    background-color: #e4e4e4;
     padding: var(--stg-gap);
     padding-bottom: calc(var(--stg-gap) - 3px);
     position: relative;
@@ -2697,7 +2697,7 @@ a.bringer-arrow-link {
 .bringer-dots .swiper-pagination-bullet {
     background: var(--bringer-s-heading);
 }
-.bringer-dots .swiper-pagination-bullet-active {
+.bringer-dots .swiper-pagination-bullet-active {    
     background: var(--bringer-s-heading);
 }
 .bringer-dots.swiper-pagination {

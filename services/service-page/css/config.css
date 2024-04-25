@@ -8,25 +8,25 @@
 =============== */
 :root {
     /* Used as body background and overlays */
-    --bringer-s-body-bg: #07090D;
+    --bringer-s-body-bg: #FFFFFF; /* Change the body background to white */
 
     /* Used as a background color for header, footer, and mobile navigation */
-    --bringer-s-nav: #07090DCC;
+    --bringer-s-nav: #FFFFFF; /* Change the navigation background to white */
 
     /* Used as a background color for block containers, sub-menus, and form inputs */
-    --bringer-s-container-bg: #1A1D24;
+    --bringer-s-container-bg: #FFFFFF; /* Change the container background to white */
 
     /* The same as the previous one but with transparency for frosted glass blocks */
-    --bringer-s-container-frosted: #1A1D24EE;
+    --bringer-s-container-frosted: #FFFFFFEE; /* Change the frosted container background to white with transparency */
 
     /* Used as a color for headings, page titles, button labels, and other bright text accents */
-    --bringer-s-heading: #F5F7FA;
+    --bringer-s-heading: #000000; /* Change the heading color to black */
 
     /* It is the same as the previous one but with transparency. Used for labels, meta, and some hover effects */
-    --bringer-s-heading-fade: #F5F7FAC0;
+    --bringer-s-heading-fade: rgba(0, 0, 0, 0.75); /* Adjust the heading fade color to black with transparency */
 
     /* Used as a color for general content */
-    --bringer-s-text: #C5C7CE;
+    --bringer-s-text: #000000; /* Change the text color to black */
 
     /* A background color for accents, like buttons, highlighted blocks, etc. */
     --bringer-s-accent: #3F6EE9;
@@ -74,6 +74,7 @@
     /* Main menu current item text color */
     --bringer-c-menu-active: var(--bringer-s-heading);
 }
+
 
 /* ==========
    TYPOGRAPHY
