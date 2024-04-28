@@ -648,7 +648,7 @@ a.bringer-button {
     padding: var(--bringer-button-spacing);
     display: inline-block;
     color: var(--bringer-s-accented-text);
-    background: black;
+    background: var(--bringer-s-accent);
     border-radius: var(--bringer-button-br);
     border: 1px solid var(--bringer-s-border-accent);
     transition: background-color 0.3s;
