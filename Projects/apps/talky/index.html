@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-    <title>Saasland</title>
+    <title>Talky AI</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!--icon font css-->
@@ -22,6 +22,7 @@
 </head>
 
 <body>
+    
     <div id="preloader">
         <div id="ctn-preloader" class="ctn-preloader">
             <div class="animation-preloader">
@@ -73,7 +74,7 @@
         <header class="header_area">
             <nav class="navbar navbar-expand-lg menu_one">
                 <div class="container">
-                    <a class="navbar-brand" href="#"><img src="images/logo.png" srcset="images/logo2x.png 2x" alt="logo"></a>
+                    <a class="navbar-brand" href="#"><img src="images/TalkyAI.png" srcset="images/TalkyAI.png" alt="logo"></a>
                     <a class="btn_get btn_hover mobile_btn ml-auto" href="#get-app">Get Started</a>
                     <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="menu_toggle">
@@ -539,8 +540,8 @@
 
         <section class="chat_banner_area">
             <img class="p_absoulte cloud" data-parallax="{" x":="" 0,="" "y":="" 150}"="" src="images/cloud.png" alt="">
-            <img class="p_absoulte left wow fadeInLeft" data-wow-delay="0.2s" src="images/left_leaf.png" alt="">
-            <img class="p_absoulte right wow fadeInRight" data-wow-delay="0.3s" src="images/right_leaf.png" alt="">
+            <!-- <img class="p_absoulte left wow fadeInLeft" data-wow-delay="0.2s" src="images/left_leaf.png" alt=""> -->
+            <!-- <img class="p_absoulte right wow fadeInRight" data-wow-delay="0.3s" src="images/right_leaf.png" alt=""> -->
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6">
@@ -552,7 +553,101 @@
                             </h2>
                             <div class="text-center pr_100 wow fadeInUp" data-wow-delay="0.4s">
                                 <a href="#" class="chat_btn btn_hover">Live chat for free</a>
-                                <span>(No credit card requierd)</span>
+                                <span>(Change As you Wish)</span>
+                                
+<style>
+    /* Chat widget button styles */
+    .chat-widget-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        background-color: #fae794;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        z-index: 9999;
+    }
+    
+    .chat-widget-button img {
+        width: 30px; /* Adjust the size of the chat icon as needed */
+        height: auto;
+    }
+    
+    /* Chat widget container styles */
+    .chat-widget-container {
+        position: fixed;
+        bottom: 90px; /* Adjust this value based on the size of your button */
+        right: 20px;
+        width: 300px;
+        height: 400px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        display: none; /* Initially hide the chat widget */
+        z-index: 9998;
+    }
+    
+    /* Your other styles go here */
+    
+    
+    </style>
+    <!-- Chat widget button with SVG icon -->
+    <div class="chat-widget-button" id="chatWidgetButton">
+        <img src="https://zuhd.store/cdn/shop/files/header-logo.svg?v=1676959879&width=560" alt="Chat Icon">
+    </div>
+    <input type="file" id="uploadInput" accept="image/png" style="display: none;">
+    <button onclick="openFileUploader()">Upload Icon</button>
+    
+    
+    
+    <input type="color" id="colorPicker">
+    <button id="applyColor">Apply Color</button>
+    
+    <!-- Chat widget container -->
+    <iframe src="https://penpal.techrealm.pk/app/index.html" class="chat-widget-container" id="chatWidgetContainer" frameborder="0"></iframe>
+    
+    <!-- Your other content goes here -->
+    <script>
+        document.getElementById('applyColor').addEventListener('click', function() {
+            var color = document.getElementById('colorPicker').value;
+            document.querySelector('.chat-widget-button').style.backgroundColor = color;
+        });
+        </script>
+    <script>function openFileUploader() {
+        const fileInput = document.getElementById('uploadInput');
+        const chatIcon = document.getElementById('chatWidgetButton').querySelector('img');
+    
+        fileInput.onchange = function() {
+            const file = fileInput.files[0];
+            if (file) {
+                const reader = new FileReader();
+    
+                reader.onload = function(e) {
+                    chatIcon.src = e.target.result;
+                };
+    
+                reader.readAsDataURL(file);
+            }
+        };
+    
+        fileInput.click();
+    }</script>
+    
+    <script>// Function to toggle the visibility of the chat widget container
+        document.getElementById("chatWidgetButton").addEventListener("click", function() {
+          var chatWidgetContainer = document.getElementById("chatWidgetContainer");
+          if (chatWidgetContainer.style.display === "none") {
+              chatWidgetContainer.style.display = "block";
+          } else {
+              chatWidgetContainer.style.display = "none";
+          }
+        });
+        </script> 
                             </div>
                         </div>
                     </div>
@@ -645,13 +740,13 @@
                 </div>
             </div>
         </section>
-        <section class="chat_features_area">
+        <!-- <section class="chat_features_area">
             <div class="container">
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <div class="chat_features_img chat_features_img_two">
                             <img class="p_absoulte dot_bg" src="images/dot.png" alt="">
-                            <img class="chat_one" data-parallax="{" x":="" 20,="" "y":="" -40}"="" src="images/skyp_1.png" alt="">
+                            <img class="chat_one" data-parallax="{" x":="" 20,="" "y":="" -40}"="" src="images/chatbot-on-web.png" alt="" width="554" height="339">
                             <img data-parallax="{" x":="" 0,="" "y":="" 40}"="" class="p_absoulte chat_two" src="images/skyp_2.png" alt="">
                         </div>
                     </div>
@@ -666,7 +761,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
         <section class="chat_features_area chat_features_area_three">
             <div class="container">
                 <div class="row flex-row-reverse align-items-center">
@@ -762,6 +857,19 @@
                             <h5>Python</h5>
                         </a>
                     </div>
+                    <!-- Additional No-Code Platforms -->
+                    <div class="col-lg-2 col-md-4 col-sm-6">
+                        <a href="#" class="s_integration_item wow fadeInLeft" data-wow-delay="2s">
+                            <img src="images/squarespace.png" alt="Squarespace">
+                            <h5>Squarespace</h5>
+                        </a>
+                    </div>
+                    <div class="col-lg-2 col-md-4 col-sm-6">
+                        <a href="#" class="s_integration_item wow fadeInLeft" data-wow-delay="2.2s">
+                            <img src="images/wix.png" alt="Wix">
+                            <h5>Wix</h5>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -772,9 +880,7 @@
                         <div class="clients_feedback_item flex-row-reverse">
                             <div class="feedback_body">
                                 <p>
-                                    Tidio has given our clients a quick and easy way to send over thoughts and questions
-                                    without delay or wait time! No second guessing – just asked and answered quickly in
-                                    order to make their purchasing decisions easier!
+                                    Tidio has improved my website's sales and automated our environment, allowing us to reduce costs. The chatbot provides a quick and easy way for clients to send their thoughts and questions without delay. No second guessing – just asked and answered quickly to facilitate purchasing decisions!
                                 </p>
                                 <div class="ratting">
                                     <i class="fas fa-star"></i>
@@ -783,8 +889,8 @@
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                 </div>
-                                <h3 class="f_name">John Doe</h3>
-                                <a href="#">hello.com</a>
+                                <h3 class="f_name">Saad Tahseen Moid</h3>
+                                <a href="https://digitalsoftwaremarket.com">digitalsoftwaremarket.com</a>
                             </div>
                             <img src="images/john.png" alt="">
                         </div>
@@ -793,9 +899,7 @@
                         <div class="clients_feedback_item">
                             <div class="feedback_body">
                                 <p>
-                                    Tidio has given our clients a quick and easy way to send over thoughts and questions
-                                    without delay or wait time! No second guessing – just asked and answered quickly in
-                                    order to make their purchasing decisions easier!
+                                    Tidio has improved Tauseef's website's sales and automated their environment, allowing them to reduce costs. The chatbot provides a quick and easy way for clients to send their thoughts and questions without delay. No second guessing – just asked and answered quickly to facilitate purchasing decisions!
                                 </p>
                                 <div class="ratting">
                                     <i class="fas fa-star"></i>
@@ -804,8 +908,8 @@
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                 </div>
-                                <h3 class="f_name">Richard Tea</h3>
-                                <a href="#">hello.com</a>
+                                <h3 class="f_name">Tauseef</h3>
+                                <a href="https://digitalsoftwareplanet.com">digitalsoftwareplanet.com</a>
                             </div>
                             <img src="images/richard.png" alt="">
                         </div>
@@ -828,8 +932,8 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6">
                         <div class="f_widget dark_widget company_widget">
-                            <a href="index.html" class="f-logo"><img src="images/logo2.png" alt=""></a>
-                            <p>© 2019 SaasLand, LLC. All rights reserved. Proudly made in NY</p>
+                            <a href="index.html" class="f-logo"><img src="images/TalkyAI.png" alt=""></a>
+                            <p>© 2019 Talky AI, LLC. All rights reserved. Proudly made in NY</p>
                             <div class="f_social_icon">
                                 <a href="#" class="ti-facebook"></a>
                                 <a href="#" class="ti-twitter-alt"></a>
